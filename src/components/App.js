@@ -1,11 +1,14 @@
 import React from "react";
-
-import "../styles/App.css";
+import Header from "./Header/Header"
+import Hero from "./Hero/Hero"
+import "../styles/normalize.css";
+import "./App.css";
 
 const App = () => {
   return (
     <div>
-      <h1>My  App!</h1>
+      <Header />
+      <Hero />
     </div>
   );
 };

@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    background: #2A2E32;
+  }
+  
+  .header__logo {
+    margin: auto;
+    padding: 15px 0 18px;
+  }
