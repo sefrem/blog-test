@@ -1,0 +1,11 @@
+.modal {
+    width: 400px;
+
+}
+
+.modal__header {
+    margin: 32px 0;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
