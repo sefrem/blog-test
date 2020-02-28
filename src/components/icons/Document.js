@@ -16,7 +16,7 @@ const Document = () => {
         fill="black"
       />
       <mask
-        id="mask0"
+        id="mask-document"
         mask-type="alpha"
         maskUnits="userSpaceOnUse"
         x="1"
@@ -31,7 +31,7 @@ const Document = () => {
           fill="white"
         />
       </mask>
-      <g mask="url(#mask0)">
+      <g mask="url(#mask-document)">
         <rect width="44" height="44" fill="#2B94E1" />
       </g>
     </svg>

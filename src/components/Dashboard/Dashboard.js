@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React  from "react";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
 
@@ -6,7 +6,6 @@ import "./dashboard.css";
 
 const Dashboard = () => {
   const posts = useSelector(store => store)
-  
   return (
     <div className="dashboard">
       <div className="dashboard__content">
@@ -43,4 +42,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default React.memo(Dashboard);

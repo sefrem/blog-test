@@ -1,0 +1,35 @@
+.preview {
+    position: relative;
+    /* max-width: 319px;
+    max-height: 198px; */
+}
+
+.preview__image {
+    width: 319px;
+    height: 198px;
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+.preview__remove {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    padding: 6px;
+    background: rgb(0, 0, 0, 0.8);
+    mix-blend-mode: normal;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.preview__remove:hover {
+    background: rgba(237, 45, 45, 0.8);
+    mix-blend-mode: normal;
+}
+
+.preview__remove:active {
+    background: rgba(208, 0, 0, 0.8);
+    mix-blend-mode: normal;
+}
+
+

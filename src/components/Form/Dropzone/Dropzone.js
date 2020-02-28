@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDropzone } from "react-dropzone";
 import Document from "../../icons/Document";
-import "./dropzone.css"
+import "./dropzone.css";
 
-const Dropzone = () => {
-  const [preview, setPreview] = useState(null);
-
+const Dropzone = props => {
+  const { setPreview } = props;
   const { getRootProps, getInputProps } = useDropzone({
     accept: "image/*",
     multiple: false,
@@ -16,17 +15,12 @@ const Dropzone = () => {
 
   return (
     <div {...getRootProps()} className="dropzone">
-      {preview ? (
-        <img className="dropzone__preview" src={preview} alt="" />
-      ) : (
-        <div className="dropzone__description">
-          <Document />
-          <div className="dropzone__description-text">
-            select an image file to upload or drag it here
-          </div>
+      <div className="dropzone__description">
+        <Document />
+        <div className="dropzone__description-text">
+          select an image file to upload or drag it here
         </div>
-      )}
-
+      </div>
       <input {...getInputProps()} />
     </div>
   );

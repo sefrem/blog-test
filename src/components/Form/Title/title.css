@@ -1,0 +1,25 @@
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title__label {
+    margin-bottom: 8px;
+    line-height: 1.5rem;
+}
+
+.title__input {
+    padding: 9px 0 11px 13px;
+    border: 1px solid #A6B0B3;
+    border-radius: 5px;
+}
+
+.title__input_error {
+    border-color: red;
+}
+
+.title__error {
+    margin-top: 5px;
+    color: red;
+    font-size: 0.8rem;
+}

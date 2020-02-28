@@ -1,7 +1,8 @@
 import React from "react";
-import "./hero.css"
+import Button from "../UI/Button";
+import "./hero.css";
 
-const Hero = () => {
+const Hero = props => {
   return (
     <div className="hero">
       <div className="hero__title">Webinars</div>
@@ -9,9 +10,13 @@ const Hero = () => {
         Here you can register and take part in educational webinars conducted by
         the best digital marketing experts.
       </div>
-      <button className="add">Add new</button>
+      <Button
+        classModificator="btn_add"
+        onClick={() => props.setShowForm(true)}
+        text="Add new"
+      />
     </div>
   );
 };
 
-export default Hero;
+export default React.memo(Hero);
