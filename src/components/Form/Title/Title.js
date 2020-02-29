@@ -2,8 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import "./title.css";
 
-const Title = props => {
-  const { value, onChange, error } = props;
+const Title = ({ value, onChange, error }) => {
   return (
     <div className="title mt-24">
       <label htmlFor="title" className="title__label">

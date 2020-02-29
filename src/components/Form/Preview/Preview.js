@@ -2,8 +2,7 @@ import React from "react";
 import Trash from "../../icons/Trash";
 import "./preview.css";
 
-const Preview = props => {
-  const { preview, setPreview } = props;
+const Preview = ({ preview, setPreview }) => {
   return (
     <div className="preview">
       <img className="preview__image" src={preview} alt="" />

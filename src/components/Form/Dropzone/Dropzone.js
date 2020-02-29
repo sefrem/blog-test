@@ -3,8 +3,7 @@ import { useDropzone } from "react-dropzone";
 import Document from "../../icons/Document";
 import "./dropzone.css";
 
-const Dropzone = props => {
-  const { setPreview } = props;
+const Dropzone = ({ setPreview }) => {
   const { getRootProps, getInputProps } = useDropzone({
     accept: "image/*",
     multiple: false,

@@ -1,16 +1,12 @@
 import { createStore, applyMiddleware } from "redux";
 import postsReducer from "../redux/posts/posts.reducer";
 import { composeWithDevTools } from "redux-devtools-extension";
-import posts from "../assets/posts";
-import { loadState, saveState } from "./localStorage";
+import { populateState, saveState } from "./localStorage";
 
-saveState(posts);  //убрать, когда сделаю добавление поста по кнопке, там же и сделаю добавление в локалсторэдж
-const persistedState = loadState();
-
-const store = createStore(postsReducer, persistedState, composeWithDevTools());
+const store = createStore(postsReducer, populateState(), composeWithDevTools());
 
 store.subscribe(() => {
-  saveState(store.getState);
+  saveState(store.getState());
 });
 
 export default store;

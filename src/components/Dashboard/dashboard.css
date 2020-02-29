@@ -20,7 +20,10 @@
 }
 
 .post__img {
-    max-width: 100%;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .post__title {
@@ -48,28 +51,28 @@
     color: white;
 }
 
-.post_wide {
+.post_featured {
     flex-basis: 730px;
     position: relative;
     border-collapse: separate; 
     border-radius: 5px;
 }
 
-.post__title_wide {
+.post__title_featured {
     position: absolute;
     color: white;
     max-width: 610px;
     bottom: 75px;
 }
 
-.post__text_wide {
+.post__text_featured {
     position: absolute;
     color: white;
     max-width: 610px;
     bottom: 28px;
 }
 
-.post__img_wide {
+.post__img_featured {
     height: 100%;
     object-fit: cover;
     border-radius: 6px;

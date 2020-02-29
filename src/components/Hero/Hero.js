@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../UI/Button";
 import "./hero.css";
 
-const Hero = props => {
+const Hero = ({setShowForm}) => {
   return (
     <div className="hero">
       <div className="hero__title">Webinars</div>
@@ -11,8 +11,8 @@ const Hero = props => {
         the best digital marketing experts.
       </div>
       <Button
-        classModificator="btn_add"
-        onClick={() => props.setShowForm(true)}
+        classmodificator="btn_add"
+        onClick={() => setShowForm(true)}
         text="Add new"
       />
     </div>

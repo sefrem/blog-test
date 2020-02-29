@@ -2,8 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import "./description.css";
 
-const Description = props => {
-  const { value, onChange, error } = props;
+const Description = ({ value, onChange, error }) => {
   return (
     <div className="description mt-24">
       <label htmlFor="description" className="description__label">

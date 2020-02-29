@@ -1,3 +1,5 @@
+import posts from "../assets/posts";
+
 export const loadState = () => {
   try {
     const serializedState = localStorage.getItem("posts");
@@ -17,4 +19,15 @@ export const saveState = state => {
   } catch (err) {
     console.log("Could not serialize the state");
   }
+};
+
+export const populateState = () => {
+  let persistedState;
+  if (!localStorage.getItem("posts")) {
+    saveState(posts);
+    persistedState = loadState();
+  } else {
+    persistedState = loadState();
+  }
+  return persistedState;
 };

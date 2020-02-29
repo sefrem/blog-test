@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Dropzone from "./Dropzone/Dropzone";
 import Title from "./Title/Title";
@@ -8,15 +8,15 @@ import Button from "../../components/UI/Button";
 import Close from "../icons/Close";
 import useForm from "../../utils/useForm";
 import validate from "../../utils/inputValidation";
-import {updatePosts} from "../../redux/posts/posts.actions"
+import { updatePosts } from "../../redux/posts/posts.actions";
 import "./form.css";
 
-
-const Form = props => {
+const Form = ({ setShowForm }) => {
   const dispatch = useDispatch();
 
   const submit = () => {
-    dispatch(updatePosts({values, preview}))
+    dispatch(updatePosts({ values, preview }));
+    setShowForm(false);
   };
 
   const { values, handleChange, handleSubmit, errors } = useForm(
@@ -27,14 +27,14 @@ const Form = props => {
 
   const hideForm = e => {
     if (e.target === e.currentTarget) {
-      props.setShowForm(false);
+      setShowForm(false);
     }
   };
 
   return (
     <div className="wrapper" onClick={hideForm}>
       <form className="form">
-        <div className="form__close" onClick={() => props.setShowForm(false)}>
+        <div className="form__close" onClick={() => setShowForm(false)}>
           <Close />
         </div>
         <div className="form__content-wrapper">
@@ -55,7 +55,7 @@ const Form = props => {
             error={errors.description}
           />
           <Button
-            classModificator="btn_save"
+            classmodificator="btn_save"
             onClick={handleSubmit}
             text="Save"
           />

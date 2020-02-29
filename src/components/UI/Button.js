@@ -1,10 +1,9 @@
 import React from "react";
 import "./button.css"
 
-const Button = props => {
-  const { classModificator, onClick, text } = props;
+const Button = ({classmodificator, text, ...props}) => {
   return (
-    <button className={`btn ${classModificator}`} onClick={onClick}>
+    <button type="button" className={`btn ${classmodificator}`} {...props}>
       {text}
     </button>
   );
