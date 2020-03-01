@@ -9,14 +9,14 @@ import "./App.css";
 const App = () => {
   const [showForm, setShowForm] = useState(false);
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
     <div className="app">
       <Header />
       <Hero setShowForm={setShowForm} />
       <Dashboard />
       {showForm && <Form setShowForm={setShowForm} />}
     </div>
-    </BrowserRouter>
+    // </BrowserRouter>
   );
 };
 

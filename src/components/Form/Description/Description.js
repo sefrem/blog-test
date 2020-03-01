@@ -20,7 +20,7 @@ const Description = ({ value, onChange, error }) => {
         value={value || ""}
         onChange={onChange}
       />
-      {error ? <div className="description__error">{error}</div> : null}
+      {error && <div className="description__error">{error}</div>}
     </div>
   );
 };
