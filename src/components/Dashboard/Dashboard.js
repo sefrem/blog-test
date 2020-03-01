@@ -1,44 +1,27 @@
-import React  from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { Route, Link} from "react-router-dom";
 import classNames from "classnames";
-
+import PostsPage from "./PostsPage"
+import chunk from "lodash.chunk"
 import "./dashboard.css";
 
 const Dashboard = () => {
-  const posts = useSelector(store => store)
+  const [page, setPage ] = useState(1)
+  const posts = useSelector(store => store);
+  const postsPerPage = chunk(posts, 8)
+  console.log('postsPerPgae', postsPerPage)
+
   return (
+    <>
     <div className="dashboard">
-      <div className="dashboard__content">
-        {posts && posts.map((post, index) => (
-          <div
-            className={classNames("post", { post_featured: index === 4 })}
-            key={index}
-          >
-            <img
-              className={classNames("post__img", {
-                post__img_featured: index === 4
-              })}
-              src={post.image}
-            />
-            <div
-              className={classNames("post__title", {
-                post__title_featured: index === 4
-              })}
-            >
-              {post.title}
-            </div>
-            <div
-              className={classNames("post__text", {
-                post__text_featured: index === 4
-              })}
-            >
-              {post.text}
-            </div>
-            {post.tag ? <div className="post__tag">{post.tag}</div> : null}
-          </div>
-        ))}
-      </div>
+      <PostsPage posts={posts}/> 
     </div>
+    <div> 
+      <Link to={`/page?${page-1}`} onClick={() => setPage(prev => prev - 1)}>Prev</Link>
+      <Link to={`/page?${page+1}`} onClick={() => setPage(prev => prev + 1)}>Next</Link>
+    </div>
+    </>
   );
 };
 

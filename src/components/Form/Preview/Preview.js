@@ -13,4 +13,4 @@ const Preview = ({ preview, setPreview }) => {
   );
 };
 
-export default Preview;
+export default React.memo(Preview);

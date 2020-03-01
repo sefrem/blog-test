@@ -3,12 +3,20 @@ import { useDropzone } from "react-dropzone";
 import Document from "../../icons/Document";
 import "./dropzone.css";
 
+const normalizeFileWithPreview = (file, callback) => {
+  const fileReader = new FileReader();
+  fileReader.onload = () => {
+    callback(fileReader.result);
+  };
+  fileReader.readAsDataURL(file);
+};
+
 const Dropzone = ({ setPreview }) => {
   const { getRootProps, getInputProps } = useDropzone({
     accept: "image/*",
     multiple: false,
     onDrop: acceptedFile => {
-      setPreview(URL.createObjectURL(acceptedFile[0]));
+      normalizeFileWithPreview(acceptedFile[0], setPreview);
     }
   });
 

@@ -12,7 +12,8 @@ import { updatePosts } from "../../redux/posts/posts.actions";
 import "./form.css";
 
 const Form = ({ setShowForm }) => {
-  const dispatch = useDispatch();
+
+  const [preview, setPreview] = useState(null);
 
   const submit = () => {
     dispatch(updatePosts({ values, preview }));
@@ -23,7 +24,7 @@ const Form = ({ setShowForm }) => {
     submit,
     validate
   );
-  const [preview, setPreview] = useState(null);
+  const dispatch = useDispatch();
 
   const hideForm = e => {
     if (e.target === e.currentTarget) {
