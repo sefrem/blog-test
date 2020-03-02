@@ -1,6 +1,9 @@
 import * as types from "./posts.types";
 
-const postsReducer = (state = {}, action) => {
+const initialState = {
+  posts: []
+}
+const postsReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.UPDATE_POSTS:
       const newPost = {
@@ -8,9 +11,13 @@ const postsReducer = (state = {}, action) => {
         title: action.payload.values.title,
         text: action.payload.values.description,
       }
-      const newState = [...state];
+      const newState = [...state.posts];
       newState.push(newPost);
-      return newState;
+      console.log(newState)
+      return {
+        ...state,
+        posts: newState
+      }
     default:
       return state;
   }

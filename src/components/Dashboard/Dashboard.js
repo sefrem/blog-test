@@ -6,7 +6,7 @@ import chunk from "lodash.chunk";
 import "./dashboard.css";
 
 const Dashboard = () => {
-  const posts = useSelector(store => store);
+  const posts = useSelector(store => store.posts);
   const postsPerPage = chunk(posts, 8);
   return (
     <>
@@ -16,14 +16,16 @@ const Dashboard = () => {
           render={props => <PostsPage posts={postsPerPage} {...props} />}
         />
       </div>
-      <div>
-        {postsPerPage.map((page, index) => {
-          return (
-            <Link to={`?page=${index + 1}`} key={index}>
-              {index + 1}
-            </Link>
-          );
-        })}
+      <div className="pagination">
+        {postsPerPage.map((posts, index) => (
+          <Link
+            className="pagination__link"
+            to={`?page=${index + 1}`}
+            key={index}
+          >
+            {index + 1}
+          </Link>
+        ))}
       </div>
     </>
   );
