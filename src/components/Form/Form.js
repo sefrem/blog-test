@@ -5,14 +5,13 @@ import Title from "./Title/Title";
 import Description from "./Description/Description";
 import Preview from "./Preview/Preview";
 import Button from "../../components/UI/Button";
-import Close from "../icons/Close";
+import Close from "../Icons/Close";
 import useForm from "../../utils/useForm";
 import validate from "../../utils/inputValidation";
 import { updatePosts } from "../../redux/posts/posts.actions";
 import "./form.css";
 
 const Form = ({ setShowForm }) => {
-
   const [preview, setPreview] = useState(null);
 
   const submit = () => {

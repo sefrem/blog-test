@@ -13,7 +13,6 @@ const postsReducer = (state = initialState, action) => {
       }
       const newState = [...state.posts];
       newState.push(newPost);
-      console.log(newState)
       return {
         ...state,
         posts: newState

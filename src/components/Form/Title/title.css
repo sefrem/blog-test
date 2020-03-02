@@ -14,6 +14,10 @@
     border-radius: 5px;
 }
 
+.title__input:focus {
+    border-color: #2B94E1;
+}
+
 .title__input_error {
     border-color: red;
 }

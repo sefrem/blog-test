@@ -16,6 +16,10 @@
     border-radius: 5px;
 }
 
+.description__input:focus {
+    border-color: #2B94E1;
+}
+
 .description__input_error {
     border-color: red;
 }

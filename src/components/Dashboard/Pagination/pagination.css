@@ -1,0 +1,36 @@
+.pagination {
+    text-align: center;
+}
+
+.pagination__link {
+    padding: 8px 12px;
+    margin-right: 12px;
+    width: 34px;
+    height: 34px;
+    background: #F3F3F3;
+    color: #2B94E1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pagination__link:hover {
+    background: #DEE3E5;
+}
+
+.pagination__link:active {
+    background: #0071BC;
+    color: white;
+}
+
+.pagination__link_active {
+    background: #2B94E1;
+    color: white;
+}
+
+.pagination__link_active:hover,
+.pagination__link_active:active
+{
+    background: #2B94E1;
+    color: white;
+}
+

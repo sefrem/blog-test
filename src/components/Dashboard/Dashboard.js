@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import PostsPage from "./PostsPage/PostsPage";
+import Pagination from "../Dashboard/Pagination/Pagination";
 import chunk from "lodash.chunk";
 import "./dashboard.css";
 
@@ -9,25 +10,13 @@ const Dashboard = () => {
   const posts = useSelector(store => store.posts);
   const postsPerPage = chunk(posts, 8);
   return (
-    <>
-      <div className="dashboard">
+      <div className="dashboard mb-124">
         <Route
           path=":page?"
           render={props => <PostsPage posts={postsPerPage} {...props} />}
         />
+        <Pagination postsPerPage={postsPerPage} />
       </div>
-      <div className="pagination">
-        {postsPerPage.map((posts, index) => (
-          <Link
-            className="pagination__link"
-            to={`?page=${index + 1}`}
-            key={index}
-          >
-            {index + 1}
-          </Link>
-        ))}
-      </div>
-    </>
   );
 };
 

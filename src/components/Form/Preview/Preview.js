@@ -1,5 +1,5 @@
 import React from "react";
-import Trash from "../../icons/Trash";
+import Trash from "../../Icons/Trash";
 import "./preview.css";
 
 const Preview = ({ preview, setPreview }) => {

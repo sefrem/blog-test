@@ -4,6 +4,7 @@ import "./hero.css";
 
 const Hero = ({setShowForm}) => {
   return (
+    <>
     <div className="hero">
       <div className="hero__title">Webinars</div>
       <div className="hero__text">
@@ -16,6 +17,8 @@ const Hero = ({setShowForm}) => {
         text="Add new"
       />
     </div>
+    <div id="anchor"></div>
+    </>
   );
 };
 

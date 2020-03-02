@@ -6,7 +6,7 @@ import { populateState, saveState } from "./localStorage";
 const store = createStore(postsReducer, {posts: populateState()}, composeWithDevTools());
 
 store.subscribe(() => {
-  console.log('saving the state to localstorage')
+  console.log('saving posts to localstorage')
   saveState(store.getState().posts);
 });
 

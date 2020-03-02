@@ -1,8 +1,5 @@
-import { combineReducers } from 'redux'
 import posts from "./posts/posts.reducer"
 
-const reducerApp = combineReducers({
-  posts
-  })
-  
+const reducerApp = posts
+ 
   export default reducerApp
