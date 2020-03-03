@@ -17,7 +17,7 @@ const Dashboard = () => {
   const loadingPosts = useSelector(store => store.loader.posts);
 
   const postsPerPage = chunk(posts, 8);
-  console.log(posts)
+  
   return (
     <>
       {loadingPosts ? (
