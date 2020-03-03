@@ -15,4 +15,4 @@ const loader = (state = initialState, action) => {
   }
 };
 
-export default loader
+export default loader;

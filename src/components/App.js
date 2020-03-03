@@ -7,7 +7,7 @@ import Form from "./Form/Form";
 import "./App.css";
 
 const App = () => {
-  const showModalForm = useSelector(state => state.modalForm)
+  const showModalForm = useSelector(state => state.modalForm);
   return (
     <div className="app">
       <Header />

@@ -1,4 +1,4 @@
-export default function validate(values) {
+export default validate = values => {
   let errors = {};
   if (!values.title) {
     errors.title = "Title should not be empty";
@@ -7,4 +7,4 @@ export default function validate(values) {
     errors.description = "Please enter some text";
   }
   return errors;
-}
+};

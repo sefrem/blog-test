@@ -7,9 +7,9 @@ const Button = ({ text, trait, ...props }) => {
   return (
     <button
       type="button"
-      className={classNames('btn', {
-        'btn_success': trait === "success",
-        'btn_primary': trait === "primary"
+      className={classNames("btn", {
+        btn_success: trait === "success",
+        btn_primary: trait === "primary"
       })}
       {...props}
     >

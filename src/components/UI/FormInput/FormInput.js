@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import PropTypes from 'prop-types'; 
+import PropTypes from "prop-types";
 import "./formInput.css";
 
 const FormInput = ({ value, onChange, error }) => {
@@ -8,7 +8,7 @@ const FormInput = ({ value, onChange, error }) => {
     <input
       id="title"
       type="text"
-      className={classNames("formInput", { "formInput_error": error })}
+      className={classNames("formInput", { formInput_error: error })}
       placeholder="Enter title"
       name="title"
       value={value || ""}
@@ -23,4 +23,4 @@ FormInput.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   error: PropTypes.string
-}
+};

@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types'; 
+import PropTypes from "prop-types";
 import "./formField.css";
 
 const FormField = props => {
@@ -21,5 +21,5 @@ FormField.propTypes = {
   children: PropTypes.node.isRequired,
   error: PropTypes.string,
   id: PropTypes.string.isRequired,
-  labelText: PropTypes.string.isRequired,
-}
+  labelText: PropTypes.string.isRequired
+};

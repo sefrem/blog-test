@@ -5,15 +5,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, "/dist"),
-    filename: "index_bundle.js"
+    path: __dirname + "/dist",
+    filename: "bundle.js"
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: "babel-loader"
+        use: ["babel-loader", "eslint-loader"]
       },
       {
         test: /\.css$/,

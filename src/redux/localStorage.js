@@ -24,7 +24,6 @@ export const saveState = state => {
 export const populateState = () => {
   let persistedState;
   if (!localStorage.getItem("posts")) {
-    console.log(posts)
     saveState(posts);
     persistedState = loadState();
   } else {

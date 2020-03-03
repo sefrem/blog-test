@@ -15,6 +15,7 @@ import "./form.css";
 const Form = () => {
   const [preview, setPreview] = useState(null);
 
+  const dispatch = useDispatch();
   const submit = () => {
     dispatch(updatePosts({ values, preview }));
     dispatch(toggleModalForm());
@@ -24,7 +25,6 @@ const Form = () => {
     submit,
     validate
   );
-  const dispatch = useDispatch();
 
   const hideForm = e => {
     if (e.target === e.currentTarget) {
