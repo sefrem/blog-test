@@ -1,16 +1,21 @@
 import React from "react";
-import Trash from "../../Icons/Trash";
+import PropTypes from 'prop-types';
 import "./preview.css";
 
 const Preview = ({ preview, setPreview }) => {
   return (
     <div className="preview">
-      <img className="preview__image" src={preview} alt="" />
+      <img className="preview__image" src={preview} alt="preview" />
       <div className="preview__remove" onClick={() => setPreview(null)}>
-        <Trash />
+      <img src="/src/assets/icons/trash.svg" alt="trash" />
       </div>
     </div>
   );
 };
 
 export default React.memo(Preview);
+
+Preview.propTypes = {
+  preview: PropTypes.string.isRequired,
+  setPreview: PropTypes.func.isRequired
+}

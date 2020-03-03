@@ -16,6 +16,11 @@ const postsReducer = (state = initialState, action) => {
       return {
         ...state,
         posts: newState
+      };
+    case types.LOAD_POSTS:
+      return {
+        ...state,
+        posts: action.payload.slice()
       }
     default:
       return state;

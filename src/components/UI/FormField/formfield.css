@@ -1,0 +1,16 @@
+
+.formField {
+    display: flex;
+    flex-direction: column;
+}
+
+.formField__label {
+    margin-bottom: 8px;
+    line-height: 1.5rem;
+}
+
+.formField__error {
+    margin-top: 5px;
+    color: red;
+    font-size: 0.8rem;
+}

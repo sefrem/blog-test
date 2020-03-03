@@ -1,8 +1,12 @@
 import React from "react";
-import Button from "../UI/Button";
+import { useDispatch } from "react-redux";
+import Button from "../UI/Button/Button";
+import { toggleModalForm } from "../../redux/modalFrom/modalFrom.actions"
 import "./hero.css";
 
-const Hero = ({setShowForm}) => {
+const Hero = () => {
+  const dispatch = useDispatch()
+
   return (
     <>
     <div className="hero">
@@ -12,8 +16,8 @@ const Hero = ({setShowForm}) => {
         the best digital marketing experts.
       </div>
       <Button
-        classmodificator="btn_add"
-        onClick={() => setShowForm(true)}
+        className="btn btn_add"
+        onClick={() => dispatch(toggleModalForm())}
         text="Add new"
       />
     </div>

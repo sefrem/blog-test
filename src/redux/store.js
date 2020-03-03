@@ -1,13 +1,14 @@
 import { createStore } from "redux";
-import postsReducer from "../redux/posts/posts.reducer";
+import rootReducer from "../redux/rootReducer";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { populateState, saveState } from "./localStorage";
+import { saveState } from "./localStorage";
 
-const store = createStore(postsReducer, {posts: populateState()}, composeWithDevTools());
+const store = createStore(rootReducer, 
+  composeWithDevTools());
 
 store.subscribe(() => {
-  console.log('saving posts to localstorage')
-  saveState(store.getState().posts);
+  saveState(store.getState().posts.posts);
 });
+
 
 export default store;

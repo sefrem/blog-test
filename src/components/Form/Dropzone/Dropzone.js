@@ -1,6 +1,6 @@
 import React from "react";
 import { useDropzone } from "react-dropzone";
-import Document from "../../icons/Document";
+import PropTypes from 'prop-types';
 import "./dropzone.css";
 
 const normalizeFileWithPreview = (file, callback) => {
@@ -23,7 +23,7 @@ const Dropzone = ({ setPreview }) => {
   return (
     <div {...getRootProps()} className="dropzone">
       <div className="dropzone__description">
-        <Document />
+      <img src="/src/assets/icons/document.svg" alt="drop" />
         <div className="dropzone__description-text">
           select an image file to upload or drag it here
         </div>
@@ -34,3 +34,7 @@ const Dropzone = ({ setPreview }) => {
 };
 
 export default Dropzone;
+
+Dropzone.propTypes = {
+  setPreview: PropTypes.func.isRequired
+}

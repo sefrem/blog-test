@@ -35,15 +35,3 @@
     font-size: 2rem;
     line-height: 2.4rem;
 }
-
-.btn_save {
-    margin-top: 32px ;
-    line-height: 1.25rem;
-    color: rgb(255, 255, 255);
-    background:  rgb(79, 174, 51);
-    align-self: center;
-}
-
-.btn_save:hover {
-    background: #1D9C00;
-}

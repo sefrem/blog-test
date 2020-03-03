@@ -1,0 +1,1 @@
+export const TOGGLE_MODAL_FORM = "TOGGLE_MODAL_FORM"

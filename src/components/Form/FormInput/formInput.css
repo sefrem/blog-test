@@ -1,0 +1,14 @@
+.formInput {
+    padding: 9px 0 11px 13px;
+    border: 1px solid #A6B0B3;
+    border-radius: 5px;
+}
+
+.formInput:focus {
+    border-color: #2B94E1;
+}
+
+.formInput_error {
+    border-color: red;
+}
+

@@ -1,4 +1,5 @@
 import * as types from "./posts.types"
+import { populateState } from "../localStorage"
 
 export const updatePosts = payload => {
     return {
@@ -6,3 +7,10 @@ export const updatePosts = payload => {
       payload
     }
   }
+
+export const getPosts = () => {
+  return {
+    type: types.LOAD_POSTS,
+    payload: populateState()
+  }
+}
