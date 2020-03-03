@@ -1,6 +1,7 @@
 .btn {
     padding: 10px 20px 12px;
     border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
     outline: inherit;
     border: none;
@@ -11,17 +12,17 @@
     transform: translateY(2px);
 }
 
-.btn_add {
+.btn_primary {
     margin-bottom: 68px;
     background: white;
     border-radius: 4px;
 }
 
-.btn_add:hover {
+.btn_primary :hover {
     background: #EEEEEE;
 }
 
-.btn_save {
+.btn_success {
     margin-top: 32px ;
     line-height: 1.25rem;
     color: rgb(255, 255, 255);
@@ -29,6 +30,6 @@
     align-self: center;
 }
 
-.btn_save:hover {
+.btn_success:hover {
     background: #1D9C00;
 }

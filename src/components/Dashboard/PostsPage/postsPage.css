@@ -1,6 +1,6 @@
-.posts {
+.postsPage {
     display: flex;
     flex-wrap: wrap;
-    margin: 70px auto 20px 93px;
+    margin: 70px 20px 20px -60px;
 }
 

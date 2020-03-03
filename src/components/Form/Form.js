@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Dropzone from "./Dropzone/Dropzone";
-import FormInput from "./FormInput/FormInput";
-import FormTextarea from "./FormTextarea/FormTextarea";
+import FormInput from "../UI/FormInput/FormInput";
+import FormTextarea from "../UI/FormTextarea/FormTextarea";
 import FormField from "../UI/FormField/FormField";
 import Preview from "./Preview/Preview";
 import Button from "../UI/Button/Button";
@@ -48,31 +48,25 @@ const Form = () => {
           ) : (
             <Dropzone setPreview={setPreview} />
           )}
-          <FormField
-            error={errors.title}
-            id="title"
-            name="Title"
-            children={
-              <FormInput
-                value={values.title}
-                onChange={handleChange}
-                error={errors.title}
-              />
-            }
-          />
+          <FormField error={errors.title} id="title" labelText="Title">
+            <FormInput
+              value={values.title}
+              onChange={handleChange}
+              error={errors.title}
+            />
+          </FormField>
           <FormField
             error={errors.description}
             id="description"
-            name="Description"
-            children={
-              <FormTextarea
-                value={values.description}
-                onChange={handleChange}
-                error={errors.description}
-              />
-            }
-          />
-          <Button className="btn btn_save" onClick={handleSubmit} text="Save" />
+            labelText="Description"
+          >
+            <FormTextarea
+              value={values.description}
+              onChange={handleChange}
+              error={errors.description}
+            />
+          </FormField>
+          <Button trait="success" onClick={handleSubmit} text="Save" />
         </div>
       </form>
     </div>

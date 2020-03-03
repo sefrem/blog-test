@@ -16,7 +16,7 @@ const Hero = () => {
         the best digital marketing experts.
       </div>
       <Button
-        className="btn btn_add"
+        trait="primary"
         onClick={() => dispatch(toggleModalForm())}
         text="Add new"
       />

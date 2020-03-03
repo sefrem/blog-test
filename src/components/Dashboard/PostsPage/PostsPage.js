@@ -16,7 +16,7 @@ const PostsPage = ({ postsPerPage, ...props }) => {
   
   return (
     <>
-      <ul className="posts">
+      <ul className="postsPage">
         {postsPerPage[pageNumber - 1 || 0].map((post, index) => (
           <Post post={post} index={index} key={index} />
         ))}

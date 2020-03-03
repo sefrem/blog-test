@@ -10,7 +10,7 @@ export const updatePosts = payload => {
 
 export const getPosts = () => {
   return {
-    type: types.LOAD_POSTS,
+    type: types.GET_POSTS,
     payload: populateState()
   }
 }

@@ -13,11 +13,11 @@ const Dashboard = () => {
     dispatch(getPosts());
     dispatch(togglePostsLoader());
   }, []);
-  const posts = useSelector(store => store.posts.posts);
+  const posts = useSelector(store => store.posts);
   const loadingPosts = useSelector(store => store.loader.posts);
 
   const postsPerPage = chunk(posts, 8);
-
+  console.log(posts)
   return (
     <>
       {loadingPosts ? (

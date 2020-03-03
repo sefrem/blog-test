@@ -7,7 +7,7 @@ const store = createStore(rootReducer,
   composeWithDevTools());
 
 store.subscribe(() => {
-  saveState(store.getState().posts.posts);
+  saveState(store.getState().posts);
 });
 
 

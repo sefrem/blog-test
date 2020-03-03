@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import "./formField.css";
 
 const FormField = props => {
-  const { children, error, id, name } = props;
+  const { children, error, id, labelText } = props;
   return (
     <div className="formField mt-24">
       <label htmlFor={id} className="formField__label">
-        {name}
+        {labelText}
       </label>
       {children}
       {error && <div className="formField__error">{error}</div>}
@@ -21,5 +21,5 @@ FormField.propTypes = {
   children: PropTypes.node.isRequired,
   error: PropTypes.string,
   id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  labelText: PropTypes.string.isRequired,
 }
