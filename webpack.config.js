@@ -8,16 +8,19 @@ module.exports = {
     path: __dirname + "/dist",
     filename: "bundle.js"
   },
+  devServer: {
+    contentBase: "./build",
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader", "eslint-loader"]
+        use: "babel-loader"
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader", "postcss-loader"]
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
