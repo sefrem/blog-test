@@ -27,6 +27,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "autoprefixer": "^9.7.4",
     "classnames": "^2.2.6",
     "lodash.chunk": "^4.2.0",
     "prop-types": "^15.7.2",
