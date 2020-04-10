@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { getPostsState } from "../../redux/posts/posts.utils"
+import { getPostsLoader } from "../../redux/loader/loader.utils"
 import { Route } from "react-router-dom";
 import PostsPage from "./PostsPage/PostsPage";
 import { getPosts } from "../../redux/posts/posts.actions";
@@ -13,8 +15,8 @@ const Dashboard = () => {
     dispatch(getPosts());
     dispatch(togglePostsLoader());
   }, []);
-  const posts = useSelector(store => store.posts);
-  const loadingPosts = useSelector(store => store.loader.posts);
+  const posts = useSelector(store => getPostsState(store));
+  const loadingPosts = useSelector(store => getPostsLoader(store));
 
   const postsPerPage = chunk(posts, 8);
   

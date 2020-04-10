@@ -1,0 +1,1 @@
+export const getPostsState = store => store.posts 

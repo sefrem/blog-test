@@ -6,7 +6,7 @@ import "./hero.css";
 
 const Hero = () => {
   const dispatch = useDispatch();
-
+ 
   return (
     <>
       <div className="hero">

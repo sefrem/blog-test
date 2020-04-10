@@ -1,0 +1,1 @@
+export const getModalFormState = state => state.modalForm;

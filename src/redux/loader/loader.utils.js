@@ -1,0 +1,1 @@
+export const getPostsLoader = store => store.loader.posts
